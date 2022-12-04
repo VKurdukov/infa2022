@@ -1,6 +1,7 @@
 import pygame
 from pygame.draw import *
 from random import randint
+from time import time
 
 pygame.init()
 
@@ -67,6 +68,7 @@ def prin(objs, mousepos, score):
     circle(screen, WHITE, mousepos, 17)
     circle(screen, BLUE, mousepos, 16)
     scoresurf = screen.blit(font.render('Score: ' + str(score), 1, GREEN), (0, 0))
+    timesurf = screen.blit(font.render('Time: ' + str(int(time() - t)), 1, GREEN), (0, 100))
     combosurf = screen.blit(font.render(str(combo) + 'X', 0, GREEN), (0, 870))
 
 
@@ -83,6 +85,7 @@ funny = True
 pause = 0
 combo = 0
 mp = (600, 450)
+t = time()
 
 while funny:
 
