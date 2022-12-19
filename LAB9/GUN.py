@@ -192,7 +192,6 @@ while not finished:
     gun.real_angle()
     target.draw()
     gun.draw()
-    print(gun.an)
     for b in balls:
         b.draw()
 
